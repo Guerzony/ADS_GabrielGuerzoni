@@ -4,16 +4,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class SobreSet_1 {
-
 	public static void main(String[] args) {
-		Set<String> setFrutas = new HashSet<>();
 		
-		setFrutas.add("Laranja");
-		setFrutas.add("Pera");
-		setFrutas.add("Manga");
-		setFrutas.add("Limão");
+		Set<String> setDeFrutas = new HashSet<>();
 		
-		System.out.println(setFrutas);
+		setDeFrutas.add("Laranja");
+		setDeFrutas.add("Pera");
+		setDeFrutas.add("Manga");
+		setDeFrutas.add("Limão");
+		
+		System.out.println(setDeFrutas);
+		
 	}
-	
+
 }

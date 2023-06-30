@@ -1,12 +1,8 @@
 package banco;
 
 public abstract class Conta {
-	Double saldo = 0.0;
 	
-	@Override 
-	public String toString() {
-		return "Conta [saldo="+ saldo + "]";
-	}
+	Double saldo = 0.0;
 	
 	void depositar(Double valor) {
 		this.saldo += valor;
@@ -16,6 +12,13 @@ public abstract class Conta {
 		this.saldo -= valor;
 	}
 	
-	abstract void rentanbilizar();
+	abstract void rentabilizar();
 
+	@Override
+	public String toString() {
+		return "Conta [saldo=" + saldo + "]";
+	}
+
+	
+	
 }

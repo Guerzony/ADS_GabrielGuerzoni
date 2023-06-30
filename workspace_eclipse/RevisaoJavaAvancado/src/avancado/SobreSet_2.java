@@ -4,16 +4,17 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class SobreSet_2 {
-
-	public static void main(String[] args) {
-		Set<String> setFrutas = new TreeSet<>();
-
-		setFrutas.add("Laranja");
-		setFrutas.add("Pera");
-		setFrutas.add("Manga");
-		setFrutas.add("Limão");
-
-		System.out.println(setFrutas);
+public static void main(String[] args) {
+		
+		Set<String> setDeFrutas = new TreeSet<>();
+		
+		setDeFrutas.add("Laranja");
+		setDeFrutas.add("Pera");
+		setDeFrutas.add("Manga");
+		setDeFrutas.add("Limão");
+		
+		System.out.println(setDeFrutas);
+		
 	}
 
 }

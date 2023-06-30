@@ -2,56 +2,68 @@ package banco;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 import org.junit.jupiter.api.Test;
 
+
 public class ContaTest {
+	
 	@Test
-	void testarContaConrrente (){
-		Double saldoEsperado = 101.0;
-		ContaCorrente contaCorrente = new ContaCorrente();
-		contaCorrente.depositar(100.00);
-		contaCorrente.rentanbilizar();
+	void testConta_toString() {
+		Conta conta = new ContaCorrente();
+		conta.depositar(100.00);
+		conta.sacar(10.0);
 		
-		assertEquals(saldoEsperado, contaCorrente.saldo);
+		String str = conta.toString();
+		System.out.println(str);
 	}
 	
 	@Test
-	void testarContaPoupanca () {
-		Double saldoEsperado = 102.00;
-		ContaPoupanca contaPoupanca = new ContaPoupanca();
-		contaPoupanca.depositar(100.0);
-		contaPoupanca.rentanbilizar();
+	void testPolimorfismo() {
 		
-		assertEquals(saldoEsperado, contaPoupanca.saldo);
-	}
-	
-	@Test
-	void testPolimorfismo( ) {
-		boolean flagContaCorrente = false;
+		boolean flagContaCorrenteComoDefault = false;
 		
 		Conta conta = null;
-		if(flagContaCorrente) {
+		
+		if(flagContaCorrenteComoDefault) {
 			conta = new ContaCorrente();
-		} else {
+		}
+		else {
 			conta = new ContaPoupanca();
 		}
 		
 		conta.depositar(1000.00);
 		
-		conta.rentanbilizar();
-		
-		System.out.println(conta.getClass().getName());
+		conta.rentabilizar();
+
+		System.out.println(conta.getClass().getCanonicalName();
 		System.out.println(conta.saldo);
 	}
-	
+
 	@Test
-	void testConta_toString() {
-		ContaCorrente cc = new ContaCorrente();
-		cc.depositar(100.00);
-		cc.sacar(10.00);
-		
-		String str = cc.toString();
-		
-		System.out.println(str);
+	void testarContaCorrente() {
+
+		Double saldoEsperado = 101.0;
+
+		ContaCorrente contaCorrente = new ContaCorrente();
+		contaCorrente.depositar(100.0);
+		contaCorrente.rentabilizar();
+
+		assertEquals(saldoEsperado, contaCorrente.saldo);
 	}
+
+	@Test
+	void testarContaPoupanca() {
+
+		Double saldoEsperado = 102.0;
+
+		ContaPoupanca contaPoupanca = new ContaPoupanca();
+		contaPoupanca.depositar(100.0);
+		contaPoupanca.rentabilizar();
+
+		assertEquals(saldoEsperado, contaPoupanca.saldo);
+
+	}
+
+
 }

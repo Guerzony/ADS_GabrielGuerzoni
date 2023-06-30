@@ -1,10 +1,12 @@
 package banco;
 
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta {
 
 	@Override
-	void rentanbilizar() {
+	void rentabilizar() {
+		
 		this.saldo *= 1.02;
+		
 	}
 
 }

@@ -5,25 +5,24 @@ import java.util.Collections;
 import java.util.List;
 
 public class SobreComparable_2 {
-
 	public static void main(String[] args) {
 		
-		List<Animal> listaAnimais = new ArrayList<>();
+		List<Animal> listaDeAnimais = new ArrayList<>();
 		
-		listaAnimais.add(new Animal(1L, "Tartaruga"));
-		listaAnimais.add(new Animal(2L, "Coelho"));
-		listaAnimais.add(new Animal(3L, "Cachorro"));
-		listaAnimais.add(new Animal(4L, "Gato"));
-		listaAnimais.add(new Animal(5L, "Girafa"));
-		listaAnimais.add(new Animal(6L, "Gato"));
-
-		System.out.println("> Pela ordem de inserção");
-		System.out.println(listaAnimais);
+		listaDeAnimais.add(new Animal(1L, "Tartaruga"));
+		listaDeAnimais.add(new Animal(2L, "Coelho"));
+		listaDeAnimais.add(new Animal(3L, "Cachorro"));
+		listaDeAnimais.add(new Animal(4L, "Gato"));
+		listaDeAnimais.add(new Animal(5L, "Girafa"));
+		listaDeAnimais.add(new Animal(6L, "Gato"));
 		
-		System.out.println("> Pela ordem alfabética do nome animal:");
-		Collections.sort(listaAnimais);
-		System.out.println(listaAnimais);
-	
+		System.out.println("> Pela ordem de inserção");	
+		System.out.println(listaDeAnimais);
+		
+		System.out.println("> Pela ordem alfabética do nome do animal");
+		Collections.sort(listaDeAnimais);
+		System.out.println(listaDeAnimais);
+		
 	}
 
 }

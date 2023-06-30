@@ -6,42 +6,38 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class SobreMap_1 {
 
-	public static void main(String[] args) {
+public class SobreMap_1 {
+public static void main(String[] args) {
 		
-		Animal a1 = new Animal(1L, "Tartaruga");
-		Animal a2 = new Animal(2L, "Coelho");
-		Animal a3 = new Animal(3L, "Cachorro");
-		Animal a4 = new Animal(4L, "Gato");
-		Animal a5 = new Animal(5L, "Girafa");
 		
-		Map<String, Animal> mapaAnimais = new HashMap<>();
+		Animal a1 = new Animal(1L,"Tartaruga");
+		Animal a2 =new Animal(2L,"Coelho");
+		Animal a3 =new Animal(3L,"Cachorro");
+		Animal a4 =new Animal(4L,"Gato");
+		Animal a5 =new Animal(2L,"Coelho");
 		
-		mapaAnimais.put("TAR", a1);
-		mapaAnimais.put("COE", a2);
-		mapaAnimais.put("CAC", a3);
-		mapaAnimais.put("GAT", a4);
-		mapaAnimais.put("GIT", a5);
+		Map<String, Animal> mapaDeAnimais = new HashMap<>();
 		
-		System.out.println(mapaAnimais);
+		mapaDeAnimais.put("TAR", a1);
+		mapaDeAnimais.put("COE", a2);
+		mapaDeAnimais.put("CAO", a3);
+		mapaDeAnimais.put("GAT", a4);
+		mapaDeAnimais.put("GIT", a5);
 		
-		//expressão lambda
-		mapaAnimais.forEach((k, v) -> System.out.println(k + ": " + v));
+		System.out.println(mapaDeAnimais);
 		
-		// pegando somente as chaves
-		Set<String> setDasChaves = mapaAnimais.keySet();
+		Set<String>  setDasChaves = mapaDeAnimais.keySet();
 		System.out.println(setDasChaves);
 
-		Collection<Animal> valores = mapaAnimais.values();
-		System.out.println(valores);
+		Collection<Animal> colecaoDeValores = mapaDeAnimais.values();
+		System.out.println(colecaoDeValores);
 		
-		Set<Entry<String, Animal>> entrySet = mapaAnimais.entrySet();
-		for(Entry<String, Animal> entry: entrySet) {
-			System.out.println("Chave: "+entry.getKey());
-			System.out.println("Valor: "+entry.getValue());
+		Set<Entry<String,Animal>> entrySet = mapaDeAnimais.entrySet();
+		for(Entry<String,Animal> entry : entrySet) {
+			System.out.println("Chave: " + entry.getKey());
+			System.out.println("Valor: " + entry.getValue());
 		}
 		
 	}
-	
 }

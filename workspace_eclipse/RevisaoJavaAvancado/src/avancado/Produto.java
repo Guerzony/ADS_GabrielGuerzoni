@@ -1,13 +1,11 @@
 package avancado;
 
 public class Produto {
-
-	public Long id;
 	
-	public String descricao;
+	private Long id;
+	private String descricao;
+	private Double preco;
 	
-	public Double preco;
-
 	public Produto(Long id, String descricao, Double preco) {
 		super();
 		this.id = id;
@@ -19,9 +17,12 @@ public class Produto {
 		return id;
 	}
 
+
 	public String getDescricao() {
 		return descricao;
 	}
+
+	
 
 	public Double getPreco() {
 		return preco;
@@ -31,5 +32,6 @@ public class Produto {
 	public String toString() {
 		return "Produto [id=" + id + ", descricao=" + descricao + ", preco=" + preco + "]";
 	}
-		
+	
+
 }
